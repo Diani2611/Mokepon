@@ -24,7 +24,7 @@ function seleccionarMascotaJugador() {
     let sectionSeleccionarMascota = document.getElementById('seleccion-mascota')
     sectionSeleccionarMascota.style.display = 'none'
     let sectionSeleccionarAtaque = document.getElementById('seleccion-ataque')
-    sectionSeleccionarAtaque.style.display = 'block'
+    sectionSeleccionarAtaque.style.display = 'flex'
     let inputHipodoge = document.getElementById('hipodoge')
     let inputCapipepo = document.getElementById('capipepo')
     let inputRatigueya = document.getElementById('ratigueya')
@@ -36,8 +36,9 @@ function seleccionarMascotaJugador() {
         spanMascotaJugador.innerHTML = 'Capipepo'
     } else if (inputRatigueya.checked) {
         spanMascotaJugador.innerHTML = 'Ratigueya'
-    } else { 
-        alert('¡Selecciona una mascota!') }
+    } else {
+        alert('¡Selecciona una mascota!')
+    }
 
     seleccionarMascotaEnemigo()
 }
@@ -66,9 +67,9 @@ function ataqueTierra() {
 function ataqueAleatorioEnemigo() {
     let ataqueAleatorio = aleatorio(1, 3)
     if (ataqueAleatorio == 1) {
-         ataqueEnemigo = 'FUEGO'
-    } else if (ataqueAleatorio == 2) { 
-            ataqueEnemigo = 'AGUA' 
+        ataqueEnemigo = 'FUEGO'
+    } else if (ataqueAleatorio == 2) {
+        ataqueEnemigo = 'AGUA'
     } else { ataqueEnemigo = 'TIERRA' }
     combate()
 }
@@ -76,7 +77,9 @@ function ataqueAleatorioEnemigo() {
 function combate() {
     let spanVidasJugador = document.getElementById('vidas-jugador')
     let spanVidasEnemigo = document.getElementById('vidas-enemigo')
-    if (ataqueEnemigo == ataqueJugador) { crearMensaje("EMPATE") } else if (ataqueJugador == 'FUEGO' && ataqueEnemigo == 'TIERRA') {
+    if (ataqueEnemigo == ataqueJugador) {
+        crearMensaje("EMPATE")
+    } else if (ataqueJugador == 'FUEGO' && ataqueEnemigo == 'TIERRA') {
         crearMensaje("GANASTE")
         vidasEnemigo--
         spanVidasEnemigo.innerHTML = vidasEnemigo
@@ -97,15 +100,20 @@ function combate() {
     revisarVidas()
 }
 
-function revisarVidas() { if (vidasEnemigo == 0) { crearMensajeFinal(" ¡FELICITACIONES GANASTE! 🥳🎊 ") 
-} else if (vidasJugador == 0) { 
-    crearMensajeFinal('Lo siento, perdiste 😭') } }
+function revisarVidas() {
+    if (vidasEnemigo == 0) {
+        crearMensajeFinal(" ¡FELICITACIONES GANASTE! 🥳🎊 ")
+    } else if (vidasJugador == 0) {
+        crearMensajeFinal('Lo siento, perdiste 😭')
+    }
+}
 
 function crearMensaje(resultado) {
+
     let sectionMensajes = document.getElementById('resultado')
-    let ataquesDelJugador = document.getElementById('ataque-del-jugador')
-    let ataquesDelEnemigo = document.getElementById('ataque-del-enemigo')
-    
+    let ataquesDelJugador = document.getElementById('ataques-del-jugador')
+    let ataquesDelEnemigo = document.getElementById('ataques-del-enemigo')
+
     let nuevoAtaqueDelJugador = document.createElement('p')
     let nuevoAtaqueDelEnemigo = document.createElement('p')
 
@@ -113,14 +121,12 @@ function crearMensaje(resultado) {
     nuevoAtaqueDelJugador.innerHTML = ataqueJugador
     nuevoAtaqueDelEnemigo.innerHTML = ataqueEnemigo
 
-      
-    
-    ataquesDelJugador.appendChild(ataquesDelJugador)
-    ataquesDelEnemigo.appendChild(ataquesDelEnemigo)
+    ataquesDelJugador.appendChild(nuevoAtaqueDelJugador)
+    ataquesDelEnemigo.appendChild(nuevoAtaqueDelEnemigo)
 }
 
 function crearMensajeFinal(resultadoFinal) {
-    let sectionMensajes = document.getElementById('mensajes')
+    let sectionMensajes = document.getElementById('resultado')
     let parrafo = document.createElement('p')
     parrafo.innerHTML = resultadoFinal
     sectionMensajes.appendChild(parrafo)
