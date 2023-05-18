@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
 
 
 .body-section {
     width: 100%;
     height: 100vh;
-    margin-top: 10rem;
-    background-image: url(img/91657.jpg);
+    margin-top: 1rem;
+    background-image: url(img/wliv_hcm0_200619.jpg);
     background-size: cover;
     font-family: 'Righteous', cursive;
     display: flex;
@@ -14,16 +15,18 @@
 }
 
 .title {
-    color: aliceblue;
+    color: #000;
     font-size: 50px;
+    margin-bottom: 20px;
 }
 
 .caption{
     font-size: 40px;
+    color: #000;
 }
 
 #seleccion-mascota {
-    color: aliceblue;
+    color: #000;
     text-align: center;
 }
 
@@ -33,10 +36,9 @@
 
 .tarjeta-mokepon {
     width: 180px;
-    height: 100px;
-    background-color: aquamarine;
+    height: 120px;
+    background-color: rgb(0, 199, 133);
     box-sizing: border-box;
-    border: 2px solid cornflowerblue;
     border-radius: 10px;
     color: black;
     display: flex;
@@ -54,14 +56,15 @@
 
 .tarjeta-mokepon:hover {
     background-color:#FF8000;
+    transition: background-color .7s;
 }
 
 .boton {
      border-radius: 7px;
      box-sizing: border-box;
-     border-color: #fff;
-     background-color: transparent;
-     color: #fff;
+     border-color: #000;
+     background-color:#FF8000;
+     color: #000;
      font-size: 20px;
      margin-top: 40px;
      font-family: 'Righteous', cursive;
@@ -89,9 +92,9 @@ input {
 .boton-ataque{ 
      border-radius: 7px;
      box-sizing: border-box;
-     border-color: #fff;
-     background-color: transparent;
-     color: #fff;
+     border-color: #000;
+     background-color:#FF8000;
+     color: #000;
      font-size: 20px;
      margin-top: 10px;
      font-family: 'Righteous', cursive;
@@ -102,20 +105,49 @@ input {
 }
 
 #mensajes{
-    background-color: aqua;
+    background-color: rgb(0, 199, 133);
     border-radius: 20px;
     color: black;
-    height: 50px;
-    margin-left: 15rem;
+    margin-left: 2rem;
     margin-top: 3rem;
-    padding-top: 1rem;
-    width: 200px;
+    padding-top: 10px;
+    width: 280px;
+    height: 170px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
+#boton-reiniciar{
+    color: #000;
+    border-radius: 10px;
+    border-color: #000;
+    background-color: transparent;
+    font-family: 'Righteous', cursive;
+    margin-bottom: 7px;
+}
 
+.combate {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 150px 150px;
+}
 
+.contenedor-combate{
+    background-color:#FF8000;
+    border-radius: 10px;
+    box-sizing: border-box;
+    color: #fff;
+    margin: 1rem 2rem;
+    width: 140px;
+}
 
-
+.vidas{
+    color: #000;
+    font-size: 30px;
+    font-family: 'Luckiest Guy', cursive;
+    margin-top: 2px;
+}
 
 
 
