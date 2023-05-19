@@ -200,4 +200,10 @@ input:checked + label {
 }
 
 
+.mascota-combate {
+    color: #000;
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 20px;
+}
+
 
