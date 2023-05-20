@@ -41,6 +41,7 @@
 @media screen and (min-width:320px) {
     .title {
         color: #000;
+        -webkit-text-stroke: 0.1px #fff;
         font-size: 100px;
         margin-bottom: 20px;
     }
@@ -51,6 +52,7 @@
         color: #000;
         font-size: 75px;
         margin-bottom: 20px;
+        -webkit-text-stroke: 0.1px #fff;
     }
 }
 
@@ -63,12 +65,14 @@
 @media screen and (min-width:320px) {
     .caption {
         font-size: 70px;
+        -webkit-text-stroke: 0.1px #fff;
     }
 }
 
 @media screen and (min-width:1024px) {
     .caption {
         font-size: 35px;
+        -webkit-text-stroke: 0.2px #fff;
     }
 }
 
